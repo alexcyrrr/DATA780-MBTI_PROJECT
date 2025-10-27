@@ -1,13 +1,6 @@
 # DATA780-MBTI_PROJECT
 ### Alexandria Cyr (ENTJ), Amanda Pignataro (INFJ), Casey Devine (ENTJ) & Luke Stephens (ISTJ-A)
 
-#### How to Use the Data
-`
-# To rejoin the reddit_data.csv data, in your terminal
-cat reddit_data.csv* > reddit_data.csv.zip
-`
-
-
 #### Project Proposal
 The Myers–Briggs Type Indicator (MBTI) is a well-known personality framework that classifies people into 16 types based on four binary dimensions: Introversion/Extraversion, Sensing/iNtuition, Thinking/Feeling, and Judging/Perceiving[1]. While controversial, MBTI is frequently used in education, workplaces, and online communities, and it has been studied as a way to explore whether linguistic patterns reveal psychological traits.
 
