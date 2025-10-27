@@ -1,2 +1,26 @@
 # DATA780-MBTI_PROJECT
-Data 780 FInal Project 
+### Alexandria Cyr (ENTJ), Amanda Pignataro (INFJ), Casey Devine (ENTJ) & Luke Stephens (ISTJ-A)
+
+#### How to Use the Data
+`
+# To rejoin the reddit_data.csv data, in your terminal
+cat reddit_data.csv* > reddit_data.csv.zip
+`
+
+
+#### Project Proposal
+The Myers–Briggs Type Indicator (MBTI) is a well-known personality framework that classifies people into 16 types based on four binary dimensions: Introversion/Extraversion, Sensing/iNtuition, Thinking/Feeling, and Judging/Perceiving[1]. While controversial, MBTI is frequently used in education, workplaces, and online communities, and it has been studied as a way to explore whether linguistic patterns reveal psychological traits.
+
+With the rapid growth of social media and the expectation that digital communication will continue to expand, unprecedented amounts of text have become available for studying human behavior[4]. Researchers have applied machine learning to predict MBTI type from such data, often using datasets of forum posts or MBTI-labeled social media posts. Despite this, most prior work evaluates models only within a single dataset, which may leave it unclear whether these systems are capturing true personality signals or simply memorizing platform specific writing behaviors.
+
+The availability of high quality MBTI text data seems to be limited. The widely used Kaggle dataset of PersonalityCafe forum posts was collected in 2018, and online language may have evolved since then [2]. It is also imbalanced, with some personality types overrepresented, which can bias models. Oversampling to correct imbalance risks creating duplicates and potential fake signals. To address these issues, we will take a cross-domain approach, training on PersonalityCafe forum posts and testing on supplemental Reddit comments collected prior to 2017, and vice versa. We will also test cross-validation on both datasets to see if combining domains improves reliability. Our evaluation will track accuracy, precision, recall, F1 score, and ROC AUC.
+
+Our methods will include both logistic regression and neural networks. Logistic regression is useful for text classification because it is simple, interpretable, and extendable with techniques like one-vs-rest classification and regularization. However, given the imbalance and scale of the data, logistic regression may struggle. If this occurs, we may also plan to explore convolutional neural networks (CNNs) and transformer-based models, which may capture deeper linguistic features and handle noisy data more flexibly.
+
+If successful, our project will show whether personality prediction models are truly learning general traits rather than overfitting to specific platforms. This may impact ML researchers interested in shifting domains (e.g. Instagram to Reddit platforms), psychologists studying language and personality, developers creating adaptive systems, such as chatbots used for advertising, and how businesses can market products for different groups of people. The main risks are that MBTI labels are self-reported and may not be reliable, the PersonalityCafe dataset is dated, and the Reddit dataset requires approval to access. However, the potential payoffs may be significant, essentially, even if the results aren’t perfect, they’ll give us a clearer picture of how well models hold up across platforms, and hopefully cross-validation could boost both performance and reliability.
+
+Works Cited:
+1. Briggs, Isabel. “Manual : A Guide to the Development and Use of the Myers-Briggs Type Indicator.” (No Title), 2025, p. -, cir.nii.ac.jp/crid/1971430859764641821. Accessed 28 Sept. 2025.
+2. J, Mitchell. “(MBTI) Myers-Briggs Personality Type Dataset.” Kaggle.com, 2017, www.kaggle.com/datasets/datasnaek/mbti-type?resource=download&select=mbti_1.csv. Accessed 28 Sept. 2025.
+3. Jung, Carl. Psychological Types. Routledge, 4 Oct. 2016, www.taylorfrancis.com/books/mono/10.4324/9781315512334/psychological-types-carl-jung-john-beebe .
+4. Statista. “Number of Social Media Users Worldwide from 2017 to 2028.” Statista, www.statista.com, 17 May 2024, www.statista.com/statistics/278414/number-of-worldwide-social-network-users/.
